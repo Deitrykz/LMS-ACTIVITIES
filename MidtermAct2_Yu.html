@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Counter Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #e9f2ff;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        #countDisplay {
+            font-size: 2.5em;
+            margin: 20px 0;
+            font-weight: bold;
+            color: #0077cc;
+        }
+        button {
+            padding: 12px 18px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+            transition: 0.3s;
+        }
+        .add {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .add:hover {
+            background-color: #3e8e41;
+        }
+        .reset {
+            background-color: #ff4444;
+            color: white;
+        }
+        .reset:hover {
+            background-color: #cc0000;
+        }
+        p {
+            font-size: 0.9em;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Click Counter Game</h1>
+        <p>Made by: <strong>Deitrykz</strong></p>
+        <p>Click the button and see how high you can go!</p>
+
+        <div id="countDisplay">0</div>
+
+        <button class="add" onclick="increaseCount()">Click Me</button>
+        <button class="reset" onclick="resetCount()">Reset</button>
+    </div>
+
+    <script>
+        let counter = 0;
+
+        function increaseCount() {
+            counter++;
+            document.getElementById("countDisplay").textContent = counter;
+        }
+
+        function resetCount() {
+            counter = 0;
+            document.getElementById("countDisplay").textContent = counter;
+        }
+    </script>
+
+</body>
+</html>
